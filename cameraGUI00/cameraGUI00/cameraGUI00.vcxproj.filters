@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>qrc;rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Form Files">
+      <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
+      <Extensions>ui</Extensions>
+    </Filter>
+    <Filter Include="Translation Files">
+      <UniqueIdentifier>{639EADAA-A684-42e4-A9AD-28FC9BCB8F7C}</UniqueIdentifier>
+      <Extensions>ts</Extensions>
+    </Filter>
+    <Filter Include="Header Files\uic">
+      <UniqueIdentifier>{68572c21-5845-4d4f-b43e-4e4d97b7869d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\DLP">
+      <UniqueIdentifier>{20f4d9ef-4a5f-40de-a9d0-2b3694ba40c3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\uic\release">
+      <UniqueIdentifier>{43f56ecc-4c05-4ccd-9a95-4116fe7de3f2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\uic\debug">
+      <UniqueIdentifier>{980270cf-8a0a-4a72-b2e0-30d279d29176}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BasicFunc.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Calib.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Camera_GUI.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CaptureEventHandler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Collect_GUI.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DLPC_GUI.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dlpc350_api.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dlpc350_common.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dlpc350_usb.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DLPController.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DLPImgCreator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="EPTime_GUI.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="EVTest.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="lightControl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Mysence.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Timer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="Camera_GUI.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="Collection.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="DLPC_GUI.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="EPtime.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="lightSource.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="BasicFunc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DLPImgCreator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Mysence.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dlpc350_api.h">
+      <Filter>Header Files\DLP</Filter>
+    </ClInclude>
+    <ClInclude Include="dlpc350_common.h">
+      <Filter>Header Files\DLP</Filter>
+    </ClInclude>
+    <ClInclude Include="dlpc350_error.h">
+      <Filter>Header Files\DLP</Filter>
+    </ClInclude>
+    <ClInclude Include="dlpc350_usb.h">
+      <Filter>Header Files\DLP</Filter>
+    </ClInclude>
+    <ClInclude Include="DLPController.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="x64\Debug\uic\ui_Camera_GUI.h">
+      <Filter>Header Files\uic\debug</Filter>
+    </ClInclude>
+    <ClInclude Include="x64\Debug\uic\ui_Collection.h">
+      <Filter>Header Files\uic\debug</Filter>
+    </ClInclude>
+    <ClInclude Include="x64\Debug\uic\ui_DLPC_GUI.h">
+      <Filter>Header Files\uic\debug</Filter>
+    </ClInclude>
+    <ClInclude Include="x64\Debug\uic\ui_EPtime.h">
+      <Filter>Header Files\uic\debug</Filter>
+    </ClInclude>
+    <ClInclude Include="x64\Debug\uic\ui_lightSource.h">
+      <Filter>Header Files\uic\debug</Filter>
+    </ClInclude>
+    <ClInclude Include="x64\Release\uic\ui_Camera_GUI.h">
+      <Filter>Header Files\uic\release</Filter>
+    </ClInclude>
+    <ClInclude Include="x64\Release\uic\ui_Collection.h">
+      <Filter>Header Files\uic\release</Filter>
+    </ClInclude>
+    <ClInclude Include="x64\Release\uic\ui_DLPC_GUI.h">
+      <Filter>Header Files\uic\release</Filter>
+    </ClInclude>
+    <ClInclude Include="x64\Release\uic\ui_EPtime.h">
+      <Filter>Header Files\uic\release</Filter>
+    </ClInclude>
+    <ClInclude Include="x64\Release\uic\ui_lightSource.h">
+      <Filter>Header Files\uic\release</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="Calib.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Camera_GUI.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="CaptureEventHandler.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Collect_GUI.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="EPTime_GUI.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="EVTest.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="lightControl.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Timer.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="DLPC_GUI.h">
+      <Filter>Header Files\DLP</Filter>
+    </QtMoc>
+  </ItemGroup>
+</Project>

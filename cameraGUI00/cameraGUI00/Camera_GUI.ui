@@ -1,0 +1,869 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Camera_GUIClass</class>
+ <widget class="QMainWindow" name="Camera_GUIClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1350</width>
+    <height>836</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Camera_GUI</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QVBoxLayout" name="verticalLayout_3">
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_5">
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_6" stretch="0,0,0">
+        <property name="spacing">
+         <number>10</number>
+        </property>
+        <item>
+         <layout class="QGridLayout" name="gridLayout">
+          <property name="sizeConstraint">
+           <enum>QLayout::SetDefaultConstraint</enum>
+          </property>
+          <item row="0" column="1">
+           <widget class="QPushButton" name="pushButton_5">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string>退出标定模式</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QPushButton" name="pushButton_2">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string>开始采集</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="0">
+           <widget class="QPushButton" name="pushButton">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string>标定模式</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QPushButton" name="pushButton_4">
+            <property name="text">
+             <string>采集模式</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QPushButton" name="pushButton_6">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string>退出采集模式</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0">
+           <widget class="QPushButton" name="pushButton_9">
+            <property name="text">
+             <string>停止分析</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="1">
+           <widget class="QPushButton" name="pushButton_8">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string>开始分析曝光情况</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <layout class="QHBoxLayout" name="horizontalLayout_4"/>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QGridLayout" name="gridLayout_2" rowstretch="0,0,0,0,0" columnstretch="0,0">
+          <property name="sizeConstraint">
+           <enum>QLayout::SetMaximumSize</enum>
+          </property>
+          <property name="spacing">
+           <number>6</number>
+          </property>
+          <item row="4" column="0">
+           <widget class="QPushButton" name="pushButton_10">
+            <property name="text">
+             <string>记录曝光数据</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="1">
+           <widget class="QPushButton" name="pushButton_11">
+            <property name="text">
+             <string>打开matlab引擎</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QPushButton" name="pushButton_13">
+            <property name="text">
+             <string>辅助对焦</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0">
+           <widget class="QPushButton" name="pushButton_7">
+            <property name="text">
+             <string>记录标定图片</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="1">
+           <widget class="QPushButton" name="pushButton_14">
+            <property name="text">
+             <string>采集阶段曝光序列图片</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QPushButton" name="pushButton_12">
+            <property name="text">
+             <string>记录图片</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QGridLayout" name="gridLayout_3">
+          <property name="sizeConstraint">
+           <enum>QLayout::SetMinimumSize</enum>
+          </property>
+          <item row="2" column="0">
+           <widget class="QPushButton" name="pushButton_3">
+            <property name="text">
+             <string>白平衡矫正</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="0">
+           <widget class="QComboBox" name="comboBox">
+            <property name="layoutDirection">
+             <enum>Qt::LeftToRight</enum>
+            </property>
+            <item>
+             <property name="text">
+              <string>彩色图</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>灰度图</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QPushButton" name="pushButton_15">
+            <property name="text">
+             <string>光源</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QLabel" name="label_4">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(255, 237, 97);</string>
+            </property>
+            <property name="text">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;外设&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0">
+           <widget class="QComboBox" name="comboBox_2">
+            <item>
+             <property name="text">
+              <string>12位像素深度</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>8位像素深度</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item row="3" column="1">
+           <widget class="QPushButton" name="pushButton_16">
+            <property name="text">
+             <string>投影</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="0">
+           <widget class="QLabel" name="label_3">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(255, 237, 97);</string>
+            </property>
+            <property name="text">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:16pt; font-weight:600;&quot;&gt;属性控制&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QTextBrowser" name="textBrowser">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>700</width>
+          <height>100</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>7000</width>
+          <height>150</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_3">
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout">
+          <item>
+           <widget class="QProgressBar" name="progressBar">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="font">
+             <font>
+              <family>Arial</family>
+              <weight>50</weight>
+              <bold>false</bold>
+             </font>
+            </property>
+            <property name="toolTip">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;过曝光度&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+            <property name="autoFillBackground">
+             <bool>false</bool>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QProgressBar 
+{   
+     border: 2px solid grey;   
+     border-radius: 5px;   
+     text-align:center;
+     
+}
+QProgressBar::chunk 
+{   
+    background-color: #FF0000;
+        width: 20px;
+}</string>
+            </property>
+            <property name="value">
+             <number>40</number>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="textDirection">
+             <enum>QProgressBar::TopToBottom</enum>
+            </property>
+            <property name="format">
+             <string>过曝光度</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="font">
+             <font>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="tabletTracking">
+             <bool>false</bool>
+            </property>
+            <property name="autoFillBackground">
+             <bool>false</bool>
+            </property>
+            <property name="midLineWidth">
+             <number>1</number>
+            </property>
+            <property name="text">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:18pt;&quot;&gt;相机1&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QProgressBar" name="progressBar_2">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="font">
+             <font>
+              <family>Arial</family>
+              <weight>50</weight>
+              <bold>false</bold>
+             </font>
+            </property>
+            <property name="toolTip">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;过曝光度&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+            <property name="autoFillBackground">
+             <bool>false</bool>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QProgressBar 
+{   
+     border: 2px solid grey;   
+     border-radius: 5px;   
+     text-align:center;
+     
+}
+QProgressBar::chunk 
+{   
+    background-color: #05B8CC;
+        width: 20px;
+}</string>
+            </property>
+            <property name="value">
+             <number>40</number>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="textDirection">
+             <enum>QProgressBar::TopToBottom</enum>
+            </property>
+            <property name="format">
+             <string>欠曝光度</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QGraphicsView" name="graphicsView">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>660</width>
+            <height>600</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>8000</width>
+            <height>8000</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_2">
+          <item>
+           <widget class="QProgressBar" name="progressBar_3">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="font">
+             <font>
+              <family>Arial</family>
+              <weight>50</weight>
+              <bold>false</bold>
+             </font>
+            </property>
+            <property name="toolTip">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;过曝光度&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+            <property name="autoFillBackground">
+             <bool>false</bool>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QProgressBar 
+{   
+     border: 2px solid grey;   
+     border-radius: 5px;   
+     text-align:center;
+     
+}
+QProgressBar::chunk 
+{   
+    background-color: #FF0000;
+        width: 20px;
+}</string>
+            </property>
+            <property name="value">
+             <number>40</number>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="textDirection">
+             <enum>QProgressBar::TopToBottom</enum>
+            </property>
+            <property name="format">
+             <string>过曝光度</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_2">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="font">
+             <font>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="tabletTracking">
+             <bool>false</bool>
+            </property>
+            <property name="autoFillBackground">
+             <bool>false</bool>
+            </property>
+            <property name="midLineWidth">
+             <number>1</number>
+            </property>
+            <property name="text">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:18pt;&quot;&gt;相机2&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QProgressBar" name="progressBar_4">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="font">
+             <font>
+              <family>Arial</family>
+              <weight>50</weight>
+              <bold>false</bold>
+             </font>
+            </property>
+            <property name="toolTip">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;过曝光度&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+            <property name="autoFillBackground">
+             <bool>false</bool>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QProgressBar 
+{   
+     border: 2px solid grey;   
+     border-radius: 5px;   
+     text-align:center;
+     
+}
+QProgressBar::chunk 
+{   
+    background-color: #05B8CC;
+        width: 20px;
+}</string>
+            </property>
+            <property name="value">
+             <number>40</number>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="textDirection">
+             <enum>QProgressBar::TopToBottom</enum>
+            </property>
+            <property name="format">
+             <string>欠曝光度</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QGraphicsView" name="graphicsView_2">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>660</width>
+            <height>600</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>8000</width>
+            <height>8000</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1350</width>
+     <height>23</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="Camera_GUI.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>pushButton_4</sender>
+   <signal>pressed()</signal>
+   <receiver>Camera_GUIClass</receiver>
+   <slot>collect_BT()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>99</x>
+     <y>97</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>197</x>
+     <y>149</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_6</sender>
+   <signal>pressed()</signal>
+   <receiver>Camera_GUIClass</receiver>
+   <slot>unCollect_BT()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>147</x>
+     <y>90</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>126</x>
+     <y>191</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_3</sender>
+   <signal>pressed()</signal>
+   <receiver>Camera_GUIClass</receiver>
+   <slot>whiteBalance_BT()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>956</x>
+     <y>83</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1028</x>
+     <y>172</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_2</sender>
+   <signal>clicked()</signal>
+   <receiver>Camera_GUIClass</receiver>
+   <slot>startProgress_BT()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>48</x>
+     <y>127</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>168</x>
+     <y>232</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>pressed()</signal>
+   <receiver>Camera_GUIClass</receiver>
+   <slot>calib_BT()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>188</x>
+     <y>45</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>302</x>
+     <y>183</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_5</sender>
+   <signal>pressed()</signal>
+   <receiver>Camera_GUIClass</receiver>
+   <slot>unCalib_BT()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>68</x>
+     <y>51</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>365</x>
+     <y>158</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_8</sender>
+   <signal>clicked()</signal>
+   <receiver>Camera_GUIClass</receiver>
+   <slot>analysisExplose_BT()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>86</x>
+     <y>179</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>130</x>
+     <y>167</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_9</sender>
+   <signal>clicked()</signal>
+   <receiver>Camera_GUIClass</receiver>
+   <slot>unAnalysisExplose_BT()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>32</x>
+     <y>143</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>608</x>
+     <y>167</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_15</sender>
+   <signal>clicked()</signal>
+   <receiver>Camera_GUIClass</receiver>
+   <slot>lightControl_BT()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1190</x>
+     <y>87</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1169</x>
+     <y>114</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_12</sender>
+   <signal>clicked()</signal>
+   <receiver>Camera_GUIClass</receiver>
+   <slot>saveAPic_BT()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>710</x>
+     <y>57</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>879</x>
+     <y>151</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_11</sender>
+   <signal>clicked()</signal>
+   <receiver>Camera_GUIClass</receiver>
+   <slot>openMatlabEngin()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>810</x>
+     <y>117</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1195</x>
+     <y>133</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_10</sender>
+   <signal>clicked()</signal>
+   <receiver>Camera_GUIClass</receiver>
+   <slot>saveAnalysisData()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>710</x>
+     <y>87</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>786</x>
+     <y>190</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_7</sender>
+   <signal>pressed()</signal>
+   <receiver>Camera_GUIClass</receiver>
+   <slot>calibAPic_BT()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>79</x>
+     <y>117</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>212</x>
+     <y>210</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_14</sender>
+   <signal>clicked()</signal>
+   <receiver>Camera_GUIClass</receiver>
+   <slot>collectQueEPTimePic_BT()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>871</x>
+     <y>87</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>630</x>
+     <y>233</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>collect_BT()</slot>
+  <slot>unCollect_BT()</slot>
+  <slot>whiteBalance_BT()</slot>
+  <slot>saveAPic_BT()</slot>
+  <slot>calib_BT()</slot>
+  <slot>unCalib_BT()</slot>
+  <slot>calibAPic_BT()</slot>
+  <slot>analysisExplose_BT()</slot>
+  <slot>unAnalysisExplose_BT()</slot>
+  <slot>saveAnalysisData()</slot>
+  <slot>openMatlabEngin()</slot>
+  <slot>startProgress_BT()</slot>
+  <slot>collectQueEPTimePic_BT()</slot>
+  <slot>lightChannel_SW(int)</slot>
+  <slot>lightlevel_IN()</slot>
+  <slot>lightControl_BT()</slot>
+ </slots>
+</ui>

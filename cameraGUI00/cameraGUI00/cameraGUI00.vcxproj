@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{949A5086-838D-41E0-999A-811F9D8B9963}</ProjectGuid>
+    <Keyword>QtVS_v304</Keyword>
+    <WindowsTargetPlatformVersion Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">10.0.17763.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">10.0.17763.0</WindowsTargetPlatformVersion>
+    <QtMsBuild Condition="'$(QtMsBuild)'=='' OR !Exists('$(QtMsBuild)\qt.targets')">$(MSBuildProjectDirectory)\QtMsBuild</QtMsBuild>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt_defaults.props')">
+    <Import Project="$(QtMsBuild)\qt_defaults.props" />
+  </ImportGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="QtSettings">
+    <QtInstall>5.14.2_msvc2017_64</QtInstall>
+    <QtModules>core;gui;widgets;serialport</QtModules>
+    <QtBuildConfig>debug</QtBuildConfig>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'" Label="QtSettings">
+    <QtInstall>5.14.2_msvc2017_64</QtInstall>
+    <QtModules>core;gui;widgets;serialport</QtModules>
+    <QtBuildConfig>release</QtBuildConfig>
+  </PropertyGroup>
+  <Target Name="QtMsBuildNotFound" BeforeTargets="CustomBuild;ClCompile" Condition="!Exists('$(QtMsBuild)\qt.targets') or !Exists('$(QtMsBuild)\qt.props')">
+    <Message Importance="High" Text="QtMsBuild: could not locate qt.targets, qt.props; project may not build correctly." />
+  </Target>
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="Shared" />
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(QtMsBuild)\Qt.props" />
+    <Import Project="..\..\property\DLP4500.props" />
+    <Import Project="..\..\property\opencv4 64 Debug.props" />
+    <Import Project="..\..\property\matlab2015b.props" />
+    <Import Project="..\..\property\Camera and projector.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(QtMsBuild)\Qt.props" />
+    <Import Project="..\..\property\opencv4_64_static_release.props" />
+    <Import Project="..\..\property\DLP4500.props" />
+    <Import Project="..\..\property\matlab2015b.props" />
+    <Import Project="..\..\property\Camera and projector.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="Configuration">
+    <ClCompile>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <Optimization>Disabled</Optimization>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'" Label="Configuration">
+    <ClCompile>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <DebugInformationFormat>None</DebugInformationFormat>
+      <Optimization>MaxSpeed</Optimization>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="BasicFunc.cpp" />
+    <ClCompile Include="Calib.cpp" />
+    <ClCompile Include="Camera_GUI.cpp" />
+    <ClCompile Include="CaptureEventHandler.cpp" />
+    <ClCompile Include="Collect_GUI.cpp" />
+    <ClCompile Include="dlpc350_api.cpp" />
+    <ClCompile Include="dlpc350_common.cpp" />
+    <ClCompile Include="dlpc350_usb.cpp" />
+    <ClCompile Include="DLPController.cpp" />
+    <ClCompile Include="DLPC_GUI.cpp" />
+    <ClCompile Include="DLPImgCreator.cpp" />
+    <ClCompile Include="EPTime_GUI.cpp" />
+    <ClCompile Include="EVTest.cpp" />
+    <ClCompile Include="lightControl.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Mysence.cpp" />
+    <ClCompile Include="Timer.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="Camera_GUI.ui" />
+    <QtUic Include="Collection.ui" />
+    <QtUic Include="DLPC_GUI.ui" />
+    <QtUic Include="EPtime.ui" />
+    <QtUic Include="lightSource.ui" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="BasicFunc.h" />
+    <ClInclude Include="dlpc350_api.h" />
+    <ClInclude Include="dlpc350_common.h" />
+    <ClInclude Include="dlpc350_error.h" />
+    <ClInclude Include="dlpc350_usb.h" />
+    <ClInclude Include="DLPController.h" />
+    <ClInclude Include="DLPImgCreator.h" />
+    <ClInclude Include="Mysence.h" />
+    <ClInclude Include="x64\Debug\uic\ui_Camera_GUI.h" />
+    <ClInclude Include="x64\Debug\uic\ui_Collection.h" />
+    <ClInclude Include="x64\Debug\uic\ui_DLPC_GUI.h" />
+    <ClInclude Include="x64\Debug\uic\ui_EPtime.h" />
+    <ClInclude Include="x64\Debug\uic\ui_lightSource.h" />
+    <ClInclude Include="x64\Release\uic\ui_Camera_GUI.h" />
+    <ClInclude Include="x64\Release\uic\ui_Collection.h" />
+    <ClInclude Include="x64\Release\uic\ui_DLPC_GUI.h" />
+    <ClInclude Include="x64\Release\uic\ui_EPtime.h" />
+    <ClInclude Include="x64\Release\uic\ui_lightSource.h" />
+    <QtMoc Include="Timer.h" />
+    <QtMoc Include="lightControl.h" />
+    <QtMoc Include="EVTest.h" />
+    <QtMoc Include="EPTime_GUI.h" />
+    <QtMoc Include="DLPC_GUI.h" />
+    <QtMoc Include="Collect_GUI.h" />
+    <QtMoc Include="CaptureEventHandler.h" />
+    <QtMoc Include="Camera_GUI.h" />
+    <QtMoc Include="Calib.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">
+    <Import Project="$(QtMsBuild)\qt.targets" />
+  </ImportGroup>
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
